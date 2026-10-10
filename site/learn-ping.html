@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>핑(ping)이란 무엇인가 | ctyNet</title>
+<meta name="description" content="핑과 응답 속도(ms)의 뜻, 좋은 핑의 기준, 핑이 튀는 이유와 줄이는 방법을 쉽게 설명합니다.">
+<link rel="canonical" href="https://continyu.site/learn-ping.html">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="site.css">
+<!-- 애드센스: 승인 후 ca-pub-0000000000000000 교체 및 주석 해제 -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script> -->
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="/"><span class="logo" aria-hidden="true"></span><span>cty<b>Net</b></span></a>
+    <nav class="nav-links">
+      <a href="/guide.html">사용 가이드</a>
+      <a href="/learn-ping.html">핑이란</a>
+      <a href="/learn-route.html">경로 추적이란</a>
+      <a href="/faq.html">자주 묻는 질문</a>
+      <a class="nav-cta" href="/#download">무료 다운로드</a>
+    </nav>
+  </div>
+</header>
+
+<article class="doc">
+  <div class="wrap">
+    <h1>핑이란 무엇인가</h1>
+    <p class="lead">게임이나 영상 통화에서 자주 듣는 핑(ping), 그 숫자가 정확히 무엇을 뜻하는지 쉽게 풀어 봅니다.</p>
+    <p class="meta">최종 수정일 2026년 10월 10일</p>
+
+    <h2>핑은 왕복에 걸리는 시간입니다</h2>
+    <p>핑은 내 컴퓨터에서 상대 서버로 아주 작은 신호를 보낸 뒤, 그 답이 돌아오기까지 걸린 시간을 말합니다. 단위는 밀리초(ms)이며, 1000ms가 1초입니다. 예를 들어 핑이 30ms라면, 신호가 서버까지 갔다가 돌아오는 데 0.03초가 걸린다는 뜻입니다.</p>
+    <p>핑은 흔히 응답 속도, 지연 시간, 레이턴시(latency)라고도 불립니다. 숫자가 작을수록 반응이 빠르고, 클수록 한 박자 느리게 느껴집니다.</p>
+
+    <div class="adslot" style="padding-left:0;padding-right:0"><div class="adbox">광고 영역</div></div>
+
+    <h2>좋은 핑의 기준</h2>
+    <p>용도에 따라 체감이 다르지만, 일반적인 기준은 다음과 같습니다.</p>
+    <ul>
+      <li><strong>30ms 이하</strong> 매우 쾌적합니다. 빠른 반응이 필요한 게임도 무리가 없습니다.</li>
+      <li><strong>30ms ~ 80ms</strong> 대부분의 사용에서 문제가 없는 좋은 수준입니다.</li>
+      <li><strong>80ms ~ 160ms</strong> 웹 사용과 영상 시청에는 충분하지만, 민감한 게임에서는 다소 느리게 느껴질 수 있습니다.</li>
+      <li><strong>160ms 이상</strong> 지연이 체감됩니다. 해외 서버에 접속할 때 흔히 나타납니다.</li>
+    </ul>
+    <p>참고로 서버가 물리적으로 멀수록 핑은 커집니다. 한국에서 일본 서버는 수십 ms, 미국 서버는 100ms 이상, 유럽 서버는 200ms를 넘는 경우가 많습니다. 이는 신호가 빛의 속도로 달려도 거리가 멀면 시간이 걸리기 때문이며, 어떤 프로그램으로도 거리 자체를 줄일 수는 없습니다.</p>
+
+    <h2>핑이 튀는 이유</h2>
+    <p>핑이 일정하지 않고 갑자기 크게 오르내리는 것을 흔히 핑이 튄다고 표현합니다. 주요 원인은 다음과 같습니다.</p>
+    <ul>
+      <li>같은 집이나 사무실에서 다른 기기가 대용량 파일을 받거나 올리는 경우</li>
+      <li>백그라운드에서 업데이트나 클라우드 동기화가 도는 경우</li>
+      <li>무선 공유기와의 거리가 멀거나 주변 전파 간섭이 심한 경우</li>
+      <li>통신사 구간이나 서버 쪽이 일시적으로 혼잡한 경우</li>
+    </ul>
+
+    <h2>핑을 줄이는 일반적인 방법</h2>
+    <ul>
+      <li>무선 대신 유선 랜선으로 연결합니다.</li>
+      <li>공유기와 가까운 곳에서 사용하거나, 공유기를 재시작합니다.</li>
+      <li>다른 기기나 프로그램의 대용량 다운로드를 잠시 멈춥니다.</li>
+      <li>가능하면 나와 가까운 지역의 서버를 선택합니다.</li>
+    </ul>
+    <div class="callout">내 컴퓨터에서 주요 서버까지의 핑을 지도로 한눈에 보고 싶다면 <a href="/#download">ctyNet</a>으로 확인할 수 있습니다. 어느 지역 서버가 빠른지, 어디서 느려지는지 비교해 보세요.</div>
+  </div>
+</article>
+
+<footer class="site">
+  <div class="fbrand"><span class="logo" aria-hidden="true" style="width:20px;height:20px"></span>cty<b>Net</b></div>
+  <div class="fnav">
+    <a href="/guide.html">사용 가이드</a>
+    <a href="/learn-ping.html">핑이란</a>
+    <a href="/learn-route.html">경로 추적이란</a>
+    <a href="/faq.html">자주 묻는 질문</a>
+    <a href="/about.html">소개</a>
+    <a href="/terms.html">이용약관</a>
+    <a href="/privacy.html">개인정보처리방침</a>
+  </div>
+  <div class="copyright">continyu.site · ctyNet</div>
+</footer>
+</body>
+</html>

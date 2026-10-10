@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ctyNet</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"></span>
+      <span class="brand-name">cty<b>Net</b></span>
+    </div>
+    <div class="status" id="status">
+      <div class="st-item"><span class="st-key">내 위치</span><span class="st-val" id="st-loc">확인 중</span></div>
+      <div class="st-sep"></div>
+      <div class="st-item"><span class="st-key">IP</span><span class="st-val" id="st-ip">확인 중</span></div>
+      <div class="st-sep"></div>
+      <div class="st-item"><span class="st-key">통신사</span><span class="st-val" id="st-isp">확인 중</span></div>
+    </div>
+  </header>
+
+  <aside id="panel">
+    <nav class="tabs">
+      <button class="tab active" data-tab="ping">서버 핑</button>
+      <button class="tab" data-tab="trace">경로 추적</button>
+    </nav>
+
+    <section class="tabpane active" id="pane-ping">
+      <div class="pane-head">
+        <div class="pane-title">주요 서버까지 응답 속도</div>
+        <button class="btn-ghost" id="btn-reping">다시 측정</button>
+      </div>
+      <ul class="srv-list" id="srv-list"></ul>
+      <div class="legend">
+        <span><i class="dot good"></i>빠름</span>
+        <span><i class="dot mid"></i>보통</span>
+        <span><i class="dot bad"></i>느림</span>
+        <span><i class="dot dead"></i>응답 없음</span>
+      </div>
+    </section>
+
+    <section class="tabpane" id="pane-trace">
+      <div class="pane-head">
+        <div class="pane-title">내 데이터가 거쳐 가는 길</div>
+      </div>
+      <form class="trace-form" id="trace-form">
+        <input type="text" id="trace-host" placeholder="주소 입력  예: google.com" autocomplete="off" spellcheck="false">
+        <button type="submit" class="btn-solid" id="trace-btn">추적</button>
+      </form>
+      <div class="trace-quick" id="trace-quick">
+        <button data-host="google.com">구글</button>
+        <button data-host="www.naver.com">네이버</button>
+        <button data-host="github.com">깃허브</button>
+      </div>
+      <ol class="hop-list" id="hop-list"></ol>
+      <div class="trace-empty" id="trace-empty">주소를 입력하면 중간 경유지를 지도에 그려요</div>
+    </section>
+  </aside>
+
+  <main id="stage">
+    <canvas id="map"></canvas>
+    <div id="tooltip" class="tooltip hidden"></div>
+    <div class="attrib"><a href="https://db-ip.com" target="_blank" rel="noopener">IP Geolocation by DB-IP</a></div>
+  </main>
+</div>
+<script src="dots.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
