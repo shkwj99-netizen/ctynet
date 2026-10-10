@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <AssemblyName>ctyNet</AssemblyName>
+    <RootNamespace>CtyNet</RootNamespace>
+    <StartupObject>CtyNet.Program</StartupObject>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="data/geo.bin.gz" />
+    <EmbeddedResource Include="web/**/*.*" />
+  </ItemGroup>
+</Project>
